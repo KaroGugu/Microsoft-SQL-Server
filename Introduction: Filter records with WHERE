@@ -1,0 +1,4 @@
+--   Filter records with WHERE  --
+SELECT FirstName, LastName, City, Country
+FROM Customer
+WHERE Country = 'Germany';  -- WHERE (Country = 'Germany')  AND (City <> 'Berlin'); --   -- WHERE Country IN ('Germany', 'Brazil'); --
