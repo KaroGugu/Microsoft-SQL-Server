@@ -1,0 +1,3 @@
+--  Return records with SELECT and FROM --
+SELECT First_Name, Last_name, City, Country
+FROM Clients;
