@@ -1,0 +1,4 @@
+--    Sort records with ORDER BY   --
+SELECT *
+FROM Customer
+ORDER BY Country, Id DESC;
