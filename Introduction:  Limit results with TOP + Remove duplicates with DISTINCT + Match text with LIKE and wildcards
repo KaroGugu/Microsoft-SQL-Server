@@ -1,0 +1,17 @@
+--  Limit results with TOP --
+SELECT TOP (5) *   -- SELECT TOP 50 PERCENT * --   -- SELECT TOP 5 WITH TIES * ---
+FROM Orders
+ORDER BY TotalAmount DESC;
+
+
+-- Remove duplicates with DISTINCT -- 
+SELECT	DISTINCT City, Country
+FROM Customer
+ORDER BY City;
+
+
+--   Match text with LIKE and wildcards  --
+SELECT *
+FROM Customer
+WHERE (FirstName LIKE 'Maria') OR (FirstName LIKE 'An%')
+ORDER BY FirstName;
