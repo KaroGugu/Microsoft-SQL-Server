@@ -1,0 +1,57 @@
+-- Retrieve Records from Multiple Tables --
+
+-- INNER JOIN --
+SELECT *
+FROM Customer
+
+SELECT * 
+FROM Orders
+
+SELECT Customer.FirstName, Customer.LastName, 
+     Orders.OrderDate, Orders.OrderNumber
+FROM Customer INNER JOIN Orders ON Customer.Id = Orders.CustomerId
+ORDER BY Customer.Id;
+
+
+
+-- LEFT JOIN --
+SELECT * 
+FROM employee_kk
+
+SELECT *
+FROM department_kk
+
+
+SELECT employee_kk.emp_fname, employee_kk.emp_lname,
+       	department_kk.dept_name
+FROM employee_kk LEFT JOIN department_kk ON employee_kk.department_no = 	department_kk.dept_no;
+
+
+
+-- RIGHT JOIN --
+SELECT * 
+FROM employee_kk
+
+SELECT *
+FROM department_kk
+
+
+SELECT employee_kk.emp_fname, employee_kk.emp_lname,
+       	department_kk.dept_name
+FROM employee_kk RIGHT JOIN department_kk ON employee_kk.department_no = 	department_kk.dept_no;
+
+
+
+-- FULL OUTER JOIN --
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+
+-- CROSS JOIN --
+SELECT FirstName, LastName FROM Customer
+SELECT ProductName, SupplierId FROM Product
+
+Select Customer.FirstName, Customer.LastName, Product.ProductName
+FROM Customer CROSS JOIN Product;
