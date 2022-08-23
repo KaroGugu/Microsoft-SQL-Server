@@ -1,0 +1,17 @@
+--    Column aliases   --
+SELECT FirstName + ' ' + LastName AS 'Person', 
+    City + ', ' + Country AS Address
+FROM Customer;
+
+
+--  Create values with constants --
+SELECT FirstName + ' ' + LastName AS 'Person', 
+    City + ', ' + Country AS Address,
+	'Employee at our company' AS 'Position'
+FROM Customer;
+
+
+--  Create values with constants + mathematical operations --
+SELECT OrderNumber, OrderDate, TotalAmount,
+     TotalAmount - 10 AS Discount
+FROM Orders
